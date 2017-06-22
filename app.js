@@ -53,8 +53,7 @@ inquirer.prompt([{
                     name: 'title',
                 }
             ]).then((answers) => {
-                let count = 0;
-                mySpotify.getSpotifyInfo(answers, count);
+                mySpotify.getSpotifyInfo(answers, 0);
             });
             break;
         case commandChoices[2]:
