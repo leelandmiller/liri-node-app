@@ -3,9 +3,7 @@ const inquirer = require('inquirer');
 
 const keys = require('./keys');
 
-function SpotifyInfo() {
-
-}
+function SpotifyInfo() {}
 
 function titleCase(str) {
     if (str !== undefined) {
@@ -13,7 +11,6 @@ function titleCase(str) {
     } else {
         return '';
     }
-
 }
 
 let getSpotifyInfo = (query, count) => {
