@@ -7,9 +7,9 @@ const Spotify = require('node-spotify-api');
 const keys = require('./keys');
 const myTwitter = require('./my-twitter');
 const mySpotify = require('./my-spotify');
-const myOMDB = require('./my-omdb');
+const myTMDB = require('./my-tmdb');
 
-const commandChoices = ['Show My Tweets', 'Checkout a Song on Spotify', 'Checkout a Movie', 'Do What it Says'];
+const commandChoices = ['Show My Tweets', 'Search on Spotify', 'Checkout a Movie', 'Do What it Says'];
 
 // welcome user to Liri, ask them what they want Liri to do for them
 inquirer.prompt([{
@@ -58,6 +58,21 @@ inquirer.prompt([{
             break;
         case commandChoices[2]:
             // movie
+            inquirer.prompt([
+                {
+                    type: 'list',
+                    message: 'Search by actor for a list of their movies -OR- \nSearch by movie title for detailed info:',
+                    choices: ['Actor', 'Movie'],
+                    name: 'type',
+                },
+                {
+                    type: 'input',
+                    message: 'What is the name?',
+                    name: 'query',
+                }
+            ]).then((answers) => {
+                myTMDB.getTMDBData(answers);
+            });
             break;
         case commandChoices[2]:
             // random

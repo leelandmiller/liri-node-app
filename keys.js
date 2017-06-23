@@ -10,4 +10,9 @@ const spotifyKeys = {
     secret: 'ed186ecdde814a8cabaf5071301829f6',
 }
 
-module.exports = { twitterKeys, spotifyKeys };
+const movieAPI = {
+    key: 'a7f81ba434e0b69771bbcc1977a29d87',
+    url: 'https://api.themoviedb.org/3/movie/550?api_key='
+}
+
+module.exports = { twitterKeys, spotifyKeys, movieAPI};
