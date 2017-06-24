@@ -1,0 +1,22 @@
+[
+    {
+        "type": "twitter",
+        "name": "LoganPaul"
+    },
+    {
+        "type": "track",
+        "title": "Freesol Seven Lions"
+    },
+    {
+        "type": "artist",
+        "title": "Seven Lions"
+    },
+    {
+        "type": "movie",
+        "name": "The Dark Knight"
+    },
+    {
+        "type": "actor",
+        "name": "Johnny Depp"
+    }
+]

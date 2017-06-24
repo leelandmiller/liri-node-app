@@ -8,8 +8,10 @@ const keys = require('./keys');
 const myTwitter = require('./my-twitter');
 const mySpotify = require('./my-spotify');
 const myTMDB = require('./my-tmdb');
+const myRandom = require('./my-random');
 
 const commandChoices = ['Show My Tweets', 'Search on Spotify', 'Checkout a Movie', 'Do What it Says'];
+const rngCommands = ['twitter', 'track', 'artist', 'movie', 'actor'];
 
 // welcome user to Liri, ask them what they want Liri to do for them
 inquirer.prompt([{
@@ -68,14 +70,45 @@ inquirer.prompt([{
                 {
                     type: 'input',
                     message: 'What is the name?',
-                    name: 'query',
+                    name: 'name',
                 }
             ]).then((answers) => {
                 myTMDB.getTMDBData(answers);
             });
             break;
-        case commandChoices[2]:
-            // random
+        case commandChoices[3]:
+            // random number between 0 and total num of commands in random.json
+            let commands = myRandom.fetchCommands();
+            let rng = Math.floor(Math.random() * commands.length);
+            // get the command
+            let command = myRandom.getCommand(rng);
+
+            switch (command.type) {
+                case rngCommands[0]:
+                    // twitter
+                    myTwitter.getMyTweets(command.name);
+                    break;
+                case rngCommands[1]:
+                    // track
+                    mySpotify.getSpotifyInfo(command, 0);
+                    break;
+                case rngCommands[2]:
+                    // artist
+                    mySpotify.getSpotifyInfo(command, 0);
+                    break;
+                case rngCommands[3]:
+                    // movie
+                    myTMDB.getTMDBData(command);
+                    break;
+                case rngCommands[4]:
+                    // actor
+                    myTMDB.getTMDBData(command);
+                    break;
+                default:
+                    // odd
+                    console.log('Error');
+                    break;
+            }
             break;
     }
 });
