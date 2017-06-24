@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const request = require('request');
 
 const keys = require('./keys');
+const log = require('./log');
 const Actor = require('./Actor');
 const Movie = require('./Movie');
 
@@ -58,8 +59,8 @@ let getActor = (queryUrl) => {
             actorObj.popularity = (parseFloat(body.popularity)).toFixed(2);
 
             let actor = new Actor(actorObj);
-
-            actor.getInfo();
+            actor.showInfo();
+            logTMDB(actor, 'Actor');
         });
     });
 };
@@ -98,10 +99,23 @@ let getMovie = (queryUrl) => {
             });
 
             let movie = new Movie(movieObj);
-
-            movie.getInfo();
+            movie.showInfo();
+            logTMDB(movie, 'Movie');
         });
     });
+};
+
+let logTMDB = (data, queryType) => {
+    let newLog = {
+        command: 'tmdb',
+        input: {
+            type: queryType,
+            title: (queryType.toLowerCase() === 'movie' ? data.title : data.name),
+        },
+        log: data
+    }
+
+    log.addLog(newLog);
 };
 
 module.exports = {

@@ -1,0 +1,194 @@
+[
+  {
+    "command": "twitter",
+    "input": "pewdiepie",
+    "log": [
+      {
+        "createdAt": "Thu Jun 22 07:48:16 +0000 2017",
+        "text": "@Mr_Clasher_YT @MeMeBigBoy66 @ScaleLabNetwork As far as I know networks pretty much do exactly what you do by just… https://t.co/zjJh4RhRBF",
+        "retweetCount": 16,
+        "favoriteCount": 265
+      },
+      {
+        "createdAt": "Wed Jun 21 21:48:47 +0000 2017",
+        "text": "@Mr_Clasher_YT @ScaleLabNetwork Whats the benefit of a network for a small creator in this current state?",
+        "retweetCount": 15,
+        "favoriteCount": 567
+      },
+      {
+        "createdAt": "Wed Jun 21 20:55:24 +0000 2017",
+        "text": "Family friendly felix taking over https://t.co/PI6HZn90aU",
+        "retweetCount": 5853,
+        "favoriteCount": 54544
+      },
+      {
+        "createdAt": "Wed Jun 21 20:54:23 +0000 2017",
+        "text": "@michfawn Fuc ye",
+        "retweetCount": 21,
+        "favoriteCount": 380
+      },
+      {
+        "createdAt": "Tue Jun 20 19:59:47 +0000 2017",
+        "text": "Vote on the submissions to help the best ones get to the top! \nhttps://t.co/weFuMJcd3J",
+        "retweetCount": 437,
+        "favoriteCount": 7416
+      },
+      {
+        "createdAt": "Tue Jun 20 19:03:34 +0000 2017",
+        "text": "https://t.co/aWR6TDkB2s",
+        "retweetCount": 5418,
+        "favoriteCount": 35105
+      },
+      {
+        "createdAt": "Tue Jun 20 18:27:50 +0000 2017",
+        "text": "with a dab like that, what else is there to say https://t.co/VjNWcxjHXs",
+        "retweetCount": 1020,
+        "favoriteCount": 10910
+      },
+      {
+        "createdAt": "Tue Jun 20 18:17:41 +0000 2017",
+        "text": "@MarziaPie LIKE NOONE HAS EVER DONE THAT BEFORE",
+        "retweetCount": 1446,
+        "favoriteCount": 19099
+      },
+      {
+        "createdAt": "Tue Jun 20 18:09:24 +0000 2017",
+        "text": "@OverclockersUK 👌❤️",
+        "retweetCount": 15,
+        "favoriteCount": 478
+      },
+      {
+        "createdAt": "Mon Jun 19 19:53:54 +0000 2017",
+        "text": "crack open a boy with a cold one",
+        "retweetCount": 13936,
+        "favoriteCount": 58863
+      }
+    ]
+  },
+  {
+    "command": "spotify",
+    "input": {
+      "type": "Track",
+      "title": "Closer to the Sun"
+    },
+    "log": {
+      "queryType": "track",
+      "artist": "Slightly Stoopid",
+      "track": "Closer to the Sun",
+      "album": "Closer to the Sun",
+      "url": "https://open.spotify.com/track/1UL8GkVAs6UcWF6BZ3DYZt"
+    }
+  },
+  {
+    "command": "spotify",
+    "input": {
+      "type": "Artist",
+      "title": "Seven Lions"
+    },
+    "log": {
+      "queryType": "artist",
+      "artist": "Seven Lions",
+      "genre": "Bass trap",
+      "url": "https://open.spotify.com/artist/6fcTRFpz0yH79qSKfof7lp",
+      "followers": 132315
+    }
+  },
+  {
+    "command": "tmdb",
+    "input": {
+      "type": "Actor",
+      "title": "Johnny Depp"
+    },
+    "log": {
+      "name": "Johnny Depp",
+      "bio": "John Christopher \"Johnny\" Depp II (born June 9, 1963) is an American actor and musician. He has won the Golden Globe Award and Screen Actors Guild award for Best Actor.\n\nDepp rose to prominence on the 1980s television series 21 Jump Street, becoming a teen idol. Turning to film, he played the title character of Edward Scissorhands (1990), and later found box office success in films such as Sleepy Hollow (1999), Pirates of the Caribbean: The Curse of the Black Pearl (2003), Charlie and the Chocolate Factory (2005), and Rango (2011). He has collaborated with director and friend Tim Burton in seven films, including Sweeney Todd: The Demon Barber of Fleet Street (2007) and Alice in Wonderland (2010). Depp has gained acclaim for his portrayals of people such as Edward D. Wood, Jr., in Ed Wood, Joseph D. Pistone in Donnie Brasco, Hunter S. Thompson in Fear and Loathing in Las Vegas, George Jung in Blow, and the bank robber John Dillinger in Michael Mann's Public Enemies.\n\nFilms featuring Depp have grossed over $2.6 billion at the United States box office and over $6 billion worldwide. He has been nominated for top awards many times, winning the Best Actor Awards from the Golden Globes for Sweeney Todd: The Demon Barber of Fleet Street and from the Screen Actors Guild for Pirates of the Caribbean: The Curse of the Black Pearl. He also has garnered a sex symbol status in American cinema, being twice named as the Sexiest man alive by People magazine in 2003 and 2009.\n\nDescription above from the Wikipedia article Johnny Depp, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "bday": "1963-06-09",
+      "gender": "male",
+      "popularity": "38.30",
+      "knownFor": [
+        {
+          "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+          "releaseDate": "2003-07-09",
+          "rating": 7.4
+        },
+        {
+          "title": "Pirates of the Caribbean: Dead Man's Chest",
+          "releaseDate": "2006-06-20",
+          "rating": 6.9
+        },
+        {
+          "title": "Pirates of the Caribbean: On Stranger Tides",
+          "releaseDate": "2011-05-14",
+          "rating": 6.4
+        }
+      ]
+    }
+  },
+  {
+    "command": "tmdb",
+    "input": {
+      "type": "Movie",
+      "title": "The Dark Knight"
+    },
+    "log": {
+      "title": "The Dark Knight",
+      "year": "2008-07-16",
+      "imdbRating": 8.2,
+      "lang": "en",
+      "plot": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+      "cast": [
+        {
+          "char": "Bruce Wayne / Batman",
+          "name": "Christian Bale"
+        },
+        {
+          "char": "Alfred Pennyworth",
+          "name": "Michael Caine"
+        },
+        {
+          "char": "The Joker",
+          "name": "Heath Ledger"
+        },
+        {
+          "char": "Harvey Dent / Two-Face",
+          "name": "Aaron Eckhart"
+        },
+        {
+          "char": "Lt. James Gordon",
+          "name": "Gary Oldman"
+        },
+        {
+          "char": "Rachel Dawes",
+          "name": "Maggie Gyllenhaal"
+        },
+        {
+          "char": "Lucius Fox",
+          "name": "Morgan Freeman"
+        },
+        {
+          "char": "Lau",
+          "name": "Chin Han"
+        },
+        {
+          "char": "Salvatore Maroni",
+          "name": "Eric Roberts"
+        }
+      ],
+      "url": "http://thedarkknight.warnerbros.com/dvdsite/"
+    }
+  },
+  {
+    "command": "spotify",
+    "input": {
+      "type": "artist",
+      "title": "Seven Lions"
+    },
+    "log": {
+      "queryType": "artist",
+      "artist": "Seven Lions",
+      "genre": "Bass trap",
+      "url": "https://open.spotify.com/artist/6fcTRFpz0yH79qSKfof7lp",
+      "followers": 132318
+    }
+  }
+]

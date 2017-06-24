@@ -29,21 +29,22 @@ inquirer.prompt([{
     switch (answers.commandChoice) {
         case commandChoices[0]:
             // twitter - ask user to enter their twitter handle
-            inquirer.prompt([
-                {
-                    type: 'input',
-                    message: 'What is your twitter handle?',
-                    name: 'twitterHandle'
+            inquirer.prompt([{
+                type: 'input',
+                message: 'What is your twitter handle?',
+                name: 'twitterHandle'
+            }]).then((answers) => {
+                if (answers.twitterHandle) {
+                    myTwitter.getMyTweets(answers.twitterHandle);
+                } else {
+                    myTwitter.getMyTweets('pewdiepie');
                 }
-            ]).then((answers) => {
-                myTwitter.getMyTweets(answers.twitterHandle);
             });
             break;
         case commandChoices[1]:
             // spotify
             // ask user to enter a song to search for
-            inquirer.prompt([
-                {
+            inquirer.prompt([{
                     type: 'list',
                     message: 'Track or Artist?',
                     choices: ['Track', 'Artist'],
@@ -55,13 +56,26 @@ inquirer.prompt([{
                     name: 'title',
                 }
             ]).then((answers) => {
-                mySpotify.getSpotifyInfo(answers, 0);
+                if (answers.title) {
+                    mySpotify.getSpotifyInfo(answers, 0);
+                } else {
+                    if (answers.type === 'Track') {
+                        mySpotify.getSpotifyInfo({
+                            type: 'Track',
+                            title: 'one love bob marley'
+                        }, 0);
+                    } else if (answers.type === 'Artist') {
+                        mySpotify.getSpotifyInfo({
+                            type: 'Artist',
+                            title: 'slightly stoopid'
+                        }, 0);
+                    }
+                }
             });
             break;
         case commandChoices[2]:
             // movie
-            inquirer.prompt([
-                {
+            inquirer.prompt([{
                     type: 'list',
                     message: 'Search by actor for a list of their movies -OR- \nSearch by movie title for detailed info:',
                     choices: ['Actor', 'Movie'],
@@ -73,7 +87,21 @@ inquirer.prompt([{
                     name: 'name',
                 }
             ]).then((answers) => {
-                myTMDB.getTMDBData(answers);
+                if (answers.name) {
+                    myTMDB.getTMDBData(answers);
+                } else {
+                    if (answers.type === 'Actor') {
+                        myTMDB.getTMDBData({
+                            type: answers.type,
+                            name: 'Jennifer Lawrence'
+                        });
+                    } else if (answers.type === 'Movie') {
+                        myTMDB.getTMDBData({
+                            type: answers.type,
+                            name: 'Avatar'
+                        });
+                    }
+                }
             });
             break;
         case commandChoices[3]:

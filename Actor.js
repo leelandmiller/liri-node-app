@@ -9,7 +9,7 @@ function Actor(args) {
     this.knownFor = args.knownFor;
 }
 
-Actor.prototype.getInfo = function() {
+Actor.prototype.showInfo = function() {
 
     console.log(`
     Name: ${this.name}
@@ -24,7 +24,6 @@ Actor.prototype.getInfo = function() {
         Rating: ${movie.rating}
         `);
     });
-    
 };
 
 module.exports = Actor;

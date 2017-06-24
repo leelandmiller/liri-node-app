@@ -8,7 +8,7 @@ function Movie(args) {
     this.url = args.url;
 }
 
-Movie.prototype.getInfo = function() {
+Movie.prototype.showInfo = function() {
     console.log(`
         Title: ${this.title}
         Year: ${this.year}
@@ -17,7 +17,7 @@ Movie.prototype.getInfo = function() {
         URL: ${this.url}
 
         Plot: ${this.plot}
-        
+
         Cast:`);
 
     this.cast.forEach((castMem, i) => {

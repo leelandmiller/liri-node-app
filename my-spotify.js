@@ -2,6 +2,7 @@ const Spotify = require('node-spotify-api');
 const inquirer = require('inquirer');
 
 const keys = require('./keys');
+const log = require('./log');
 
 function SpotifyInfo() {}
 
@@ -58,10 +59,10 @@ let showSpotifyInfo = (count, data, queryType) => {
     });
     console.log('----------');
 
-    confirmResults(count, data, queryType, total);
+    confirmResults(count, data, queryType, total, spotifyInfo);
 }
 
-let confirmResults = (count, data, queryType, total) => {
+let confirmResults = (count, data, queryType, total, output) => {
     // after results are displayed, asks user if it's what they wanted.
     // if it's not, displays the next result.
     inquirer.prompt([
@@ -96,8 +97,22 @@ let confirmResults = (count, data, queryType, total) => {
                     console.log(err);
                 });
             }
+        } else {
+            let newLog = {
+                command: 'spotify',
+                input: {
+                    type: queryType,
+                    title: (queryType.toLowerCase() === 'track' ? output.track : output.artist)
+                },
+                log: output
+            }
+            logMySpotify(newLog);
         }
     });
+}
+
+let logMySpotify = (newLog) => {
+    log.addLog(newLog);
 }
 
 module.exports = { getSpotifyInfo, };

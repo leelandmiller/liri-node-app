@@ -1,6 +1,8 @@
 const fs = require('fs');
 const _ = require('lodash');
 
+const log = require('./log');
+
 let fetchCommands = () => {
     // fetch potential commands from random.json
     try {
